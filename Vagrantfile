@@ -4,7 +4,7 @@ Vagrant.configure('2') do |config|
   # use local ssh key to connect to remote vagrant box
   # update
   config.ssh.private_key_path = '~/.ssh/id_rsa'
-  config.vm.define ENV['VM_NAME']  do |t|
+  config.vm.define ENV['VM_NAME'] do |t|
   end
   config.vm.provider :azure do |azure, override|
 
