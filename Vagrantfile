@@ -25,7 +25,7 @@ Vagrant.configure('2') do |config|
       azure.admin_username = "raci"
     end
     web.vm.provision "ansible" do |ansible|
-      ansible.playbook = "provisioning/ansible.yml"
+      ansible.playbook = "provisioning/playbook.yml"
     end
   end  
 end
