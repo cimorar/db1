@@ -1,4 +1,7 @@
 ---
+- name: Include role specific vars
+  include_vars: roles/wordpress/vars/main.yml
+    
 - name: Download WordPress
   get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/srv/wordpress-{{ wp_version }}.tar.gz
            sha256sum="{{ wp_sha256sum }}"
